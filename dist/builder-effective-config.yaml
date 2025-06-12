@@ -1,0 +1,32 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.coderaiz.plataforma-educativa
+productName: CodeRaíz - Plataforma Educativa
+files:
+  - filter:
+      - src/**/*
+      - assets/**/*
+      - css/**/*
+      - js/**/*
+      - cursos/**/*
+      - '*.html'
+      - node_modules/**/*
+win:
+  target: nsis
+  icon: assets/icon.ico
+  requestedExecutionLevel: asInvoker
+mac:
+  target: dmg
+  icon: assets/icon.icns
+  category: public.app-category.education
+linux:
+  target: AppImage
+  icon: assets/icon.png
+  category: Education
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+electronVersion: 27.3.11
