@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeRaíz - Aprende a programar desde la raíz del conocimiento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>CodeRaíz</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre el Proyecto</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="nav-link">Registrarse</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <i class="fas fa-seedling"></i>
+                CodeRaíz
+            </h1>
+            <p class="hero-subtitle">Aprende a programar desde la raíz del conocimiento</p>
+            <p class="hero-description">
+                Descubre el mundo de la programación con nuestros cursos interactivos de Python, C y HTML. 
+                Diseñado especialmente para principiantes que quieren dar sus primeros pasos en el desarrollo.
+            </p>
+            <a href="#cursos" class="cta-button">
+                <i class="fas fa-rocket"></i>
+                Comenzar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section id="cursos" class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Cursos</h2>
+            <p class="section-subtitle">Elige el lenguaje que quieres aprender y comienza tu viaje</p>
+            
+            <div class="courses-grid">
+                <!-- Curso Python -->
+                <div class="course-card python-card">
+                    <div class="course-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Aprende el lenguaje más popular para principiantes. Ideal para comenzar en la programación.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Sintaxis simple y clara</li>
+                        <li><i class="fas fa-check"></i> Editor interactivo</li>
+                        <li><i class="fas fa-check"></i> Ejercicios prácticos</li>
+                    </ul>
+                    <a href="cursos/python/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar Python
+                    </a>
+                </div>
+
+                <!-- Curso JavaScript -->
+                <div class="course-card javascript-card">
+                    <div class="course-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Domina el lenguaje de la web. Crea páginas interactivas y aplicaciones dinámicas.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Interactividad web</li>
+                        <li><i class="fas fa-check"></i> Programación asíncrona</li>
+                        <li><i class="fas fa-check"></i> Proyectos modernos</li>
+                    </ul>
+                    <a href="cursos/javascript/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar JavaScript
+                    </a>
+                </div>
+
+                <!-- Curso HTML -->
+                <div class="course-card html-card">
+                    <div class="course-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Crea tus primeras páginas web aprendiendo el lenguaje de marcado fundamental.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Estructura web</li>
+                        <li><i class="fas fa-check"></i> Elementos y etiquetas</li>
+                        <li><i class="fas fa-check"></i> Proyectos reales</li>
+                    </ul>
+                    <a href="cursos/html/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar HTML
+                    </a>
+                </div>
+
+                <!-- Curso CSS -->
+                <div class="course-card css-card">
+                    <div class="course-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Dale estilo a tus páginas web. Aprende diseño responsivo y animaciones modernas.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Diseño responsivo</li>
+                        <li><i class="fas fa-check"></i> Flexbox y Grid</li>
+                        <li><i class="fas fa-check"></i> Animaciones CSS</li>
+                    </ul>
+                    <a href="cursos/css/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar CSS
+                    </a>
+                </div>
+
+                <!-- Curso C -->
+                <div class="course-card c-card">
+                    <div class="course-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Lenguaje C</h3>
+                    <p>Domina los fundamentos de la programación con el lenguaje que dio origen a muchos otros.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Fundamentos sólidos</li>
+                        <li><i class="fas fa-check"></i> Gestión de memoria</li>
+                        <li><i class="fas fa-check"></i> Base para otros lenguajes</li>
+                    </ul>
+                    <a href="cursos/c/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar C
+                    </a>
+                </div>
+
+                <!-- Curso Java -->
+                <div class="course-card java-card">
+                    <div class="course-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Aprende programación orientada a objetos con uno de los lenguajes más utilizados en la industria.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Programación orientada a objetos</li>
+                        <li><i class="fas fa-check"></i> Multiplataforma</li>
+                        <li><i class="fas fa-check"></i> Aplicaciones empresariales</li>
+                    </ul>
+                    <a href="cursos/java/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar Java
+                    </a>
+                </div>
+
+                <!-- Curso React -->
+                <div class="course-card react-card">
+                    <div class="course-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <p>Construye interfaces de usuario modernas y aplicaciones web interactivas con React.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Componentes reutilizables</li>
+                        <li><i class="fas fa-check"></i> Estado y props</li>
+                        <li><i class="fas fa-check"></i> Hooks modernos</li>
+                    </ul>
+                    <a href="cursos/react/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar React
+                    </a>
+                </div>
+
+                <!-- Curso Node.js -->
+                <div class="course-card node-card">
+                    <div class="course-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Desarrolla aplicaciones del lado del servidor con JavaScript y Node.js.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> JavaScript en el servidor</li>
+                        <li><i class="fas fa-check"></i> APIs REST</li>
+                        <li><i class="fas fa-check"></i> Aplicaciones en tiempo real</li>
+                    </ul>
+                    <a href="cursos/nodejs/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar Node.js
+                    </a>
+                </div>
+
+                <!-- Curso Bases de Datos -->
+                <div class="course-card database-card">
+                    <div class="course-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Bases de Datos</h3>
+                    <p>Aprende SQL y gestión de bases de datos relacionales y NoSQL.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> SQL y consultas</li>
+                        <li><i class="fas fa-check"></i> MySQL y PostgreSQL</li>
+                        <li><i class="fas fa-check"></i> MongoDB y NoSQL</li>
+                    </ul>
+                    <a href="cursos/database/index.html" class="course-button">
+                        <i class="fas fa-play"></i>
+                        Empezar Bases de Datos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre el Proyecto -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre CodeRaíz</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        CodeRaíz nace de la necesidad de crear un espacio accesible y amigable para quienes 
+                        desean dar sus primeros pasos en el mundo de la programación. Creemos que todos 
+                        pueden aprender a programar con las herramientas y el enfoque adecuados.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Aprendizaje Interactivo</h4>
+                            <p>Ejecuta código directamente en tu navegador</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Para Principiantes</h4>
+                            <p>Contenido diseñado desde cero para nuevos programadores</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Totalmente Responsivo</h4>
+                            <p>Aprende desde cualquier dispositivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">¿Tienes preguntas o sugerencias? ¡Nos encantaría escucharte!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>CodeRaiz@tutamail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/coderaiz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CodeRaíz. Hecho con <i class="fas fa-heart"></i> para la comunidad de aprendizaje.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

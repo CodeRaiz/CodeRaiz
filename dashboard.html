@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dashboard - CodeRaíz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>CodeRaíz</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="perfil.html" class="nav-link">Mi Perfil</a></li>
+                <li><a href="certificados.html" class="nav-link">Certificados</a></li>
+                <li><a href="#" class="nav-link" onclick="handleLogout()">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header del Dashboard -->
+    <section class="dashboard-header">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h1 style="margin: 0; color: var(--text-dark);">
+                        <i class="fas fa-user-circle"></i> ¡Hola, Estudiante!
+                    </h1>
+                    <p style="margin: 0.5rem 0 0 0; color: var(--text-light);">
+                        Bienvenido de vuelta. Continúa tu viaje de aprendizaje.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <button class="course-button" onclick="window.location.href='index.html#cursos'">
+                        <i class="fas fa-plus"></i> Explorar Cursos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section style="padding: 40px 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>5</h3>
+                    <p>Cursos Inscritos</p>
+                </div>
+                <div class="stat-card">
+                    <h3>3</h3>
+                    <p>Cursos Completados</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24</h3>
+                    <p>Horas de Estudio</p>
+                </div>
+                <div class="stat-card">
+                    <h3>85%</h3>
+                    <p>Progreso Promedio</p>
+                </div>
+            </div>
+
+            <!-- Progreso de Cursos -->
+            <div class="progress-section">
+                <h2 style="margin-bottom: 2rem; color: var(--text-dark);">
+                    <i class="fas fa-chart-line"></i> Mi Progreso
+                </h2>
+                
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="fab fa-python"></i> Python Básico</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="fab fa-js-square"></i> JavaScript Fundamentals</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="fab fa-html5"></i> HTML & CSS</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="fab fa-react"></i> React Básico</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">45%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="fas fa-database"></i> Bases de Datos SQL</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">30%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad Reciente y Recomendaciones -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                
+                <!-- Actividad Reciente -->
+                <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">
+                        <i class="fas fa-history"></i> Actividad Reciente
+                    </h3>
+                    
+                    <div style="border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-bottom: 1rem;">
+                        <h4 style="margin: 0; color: var(--text-dark); font-size: 1rem;">Completaste: Variables en Python</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Hace 2 horas</p>
+                    </div>
+
+                    <div style="border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-bottom: 1rem;">
+                        <h4 style="margin: 0; color: var(--text-dark); font-size: 1rem;">Quiz aprobado: JavaScript Básico</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Ayer</p>
+                    </div>
+
+                    <div style="border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-bottom: 1rem;">
+                        <h4 style="margin: 0; color: var(--text-dark); font-size: 1rem;">Iniciaste: Curso de React</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Hace 3 días</p>
+                    </div>
+
+                    <div style="border-left: 3px solid var(--primary-color); padding-left: 1rem;">
+                        <h4 style="margin: 0; color: var(--text-dark); font-size: 1rem;">Certificado obtenido: HTML & CSS</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Hace 1 semana</p>
+                    </div>
+                </div>
+
+                <!-- Cursos Recomendados -->
+                <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">
+                        <i class="fas fa-lightbulb"></i> Recomendado para ti
+                    </h3>
+                    
+                    <div style="border: 1px solid #e1e8ed; border-radius: var(--border-radius); padding: 1rem; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fab fa-node-js" style="font-size: 2rem; color: var(--node-color);"></i>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0; color: var(--text-dark);">Node.js Backend</h4>
+                                <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Perfecto después de JavaScript</p>
+                            </div>
+                            <button class="course-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver</button>
+                        </div>
+                    </div>
+
+                    <div style="border: 1px solid #e1e8ed; border-radius: var(--border-radius); padding: 1rem; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fab fa-java" style="font-size: 2rem; color: var(--java-color);"></i>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0; color: var(--text-dark);">Java Orientado a Objetos</h4>
+                                <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Expande tus conocimientos</p>
+                            </div>
+                            <button class="course-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver</button>
+                        </div>
+                    </div>
+
+                    <div style="border: 1px solid #e1e8ed; border-radius: var(--border-radius); padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-mobile-alt" style="font-size: 2rem; color: var(--primary-color);"></i>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0; color: var(--text-dark);">Desarrollo Móvil</h4>
+                                <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">React Native básico</p>
+                            </div>
+                            <button class="course-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logros -->
+            <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">
+                    <i class="fas fa-trophy"></i> Mis Logros
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="text-align: center; padding: 1rem; border: 2px solid var(--primary-color); border-radius: var(--border-radius); background: var(--bg-light);">
+                        <i class="fas fa-medal" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                        <h4 style="margin: 0; color: var(--text-dark);">Primer Curso</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Completaste tu primer curso</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 1rem; border: 2px solid var(--primary-color); border-radius: var(--border-radius); background: var(--bg-light);">
+                        <i class="fas fa-fire" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                        <h4 style="margin: 0; color: var(--text-dark);">Racha de 7 días</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Estudiaste 7 días seguidos</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 1rem; border: 2px solid #ddd; border-radius: var(--border-radius); opacity: 0.6;">
+                        <i class="fas fa-star" style="font-size: 2rem; color: #ccc; margin-bottom: 0.5rem;"></i>
+                        <h4 style="margin: 0; color: var(--text-light);">Experto en Python</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Completa todos los cursos de Python</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 1rem; border: 2px solid #ddd; border-radius: var(--border-radius); opacity: 0.6;">
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #ccc; margin-bottom: 0.5rem;"></i>
+                        <h4 style="margin: 0; color: var(--text-light);">Graduado</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Obtén 10 certificados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CodeRaíz. Hecho con <i class="fas fa-heart"></i> para la comunidad de aprendizaje.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Verificar autenticación al cargar la página
+        if (!requireAuth()) {
+            // La función requireAuth ya maneja la redirección
+        }
+
+        // Cargar datos del dashboard
+        async function loadDashboardData() {
+            try {
+                const data = await authManager.getDashboardData();
+                updateDashboardUI(data);
+            } catch (error) {
+                console.error('Error cargando dashboard:', error);
+                authManager.showNotification('Error cargando datos del dashboard', 'error');
+            }
+        }
+
+        // Actualizar UI con datos reales
+        function updateDashboardUI(data) {
+            // Actualizar estadísticas
+            const stats = data.stats;
+            document.querySelector('.stat-card:nth-child(1) h3').textContent = stats.cursos_inscritos || 0;
+            document.querySelector('.stat-card:nth-child(2) h3').textContent = stats.cursos_completados || 0;
+            document.querySelector('.stat-card:nth-child(3) h3').textContent = Math.round(stats.horas_estudio / 60) || 0;
+            document.querySelector('.stat-card:nth-child(4) h3').textContent = Math.round(stats.progreso_promedio) + '%' || '0%';
+
+            // Actualizar progreso de cursos
+            updateProgressSection(data.cursos);
+
+            // Actualizar logros
+            updateAchievements(data.logros);
+
+            // Actualizar nombre del usuario
+            const userNameElement = document.querySelector('h1');
+            if (userNameElement && authManager.user) {
+                userNameElement.innerHTML = `<i class="fas fa-user-circle"></i> ¡Hola, ${authManager.user.nombre}!`;
+            }
+        }
+
+        // Actualizar sección de progreso
+        function updateProgressSection(cursos) {
+            const progressSection = document.querySelector('.progress-section');
+            const progressContainer = progressSection.querySelector('div');
+            
+            // Limpiar contenido existente excepto el título
+            const title = progressSection.querySelector('h2');
+            progressSection.innerHTML = '';
+            progressSection.appendChild(title);
+
+            if (cursos.length === 0) {
+                progressSection.innerHTML += '<p style="text-align: center; color: var(--text-light);">No tienes cursos inscritos aún. <a href="index.html#cursos">¡Explora nuestros cursos!</a></p>';
+                return;
+            }
+
+            cursos.forEach(curso => {
+                const progressItem = document.createElement('div');
+                progressItem.className = 'progress-item';
+                progressItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h4><i class="${curso.icono}" style="color: ${curso.color};"></i> ${curso.nombre}</h4>
+                        <span style="color: var(--primary-color); font-weight: bold;">${Math.round(curso.progreso)}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${curso.progreso}%;"></div>
+                    </div>
+                `;
+                progressSection.appendChild(progressItem);
+            });
+        }
+
+        // Actualizar logros
+        function updateAchievements(logros) {
+            const achievementsContainer = document.querySelector('.progress-section').nextElementSibling.nextElementSibling.querySelector('div:last-child');
+            
+            if (logros.length === 0) {
+                achievementsContainer.innerHTML = '<p style="text-align: center; color: var(--text-light);">Aún no tienes logros. ¡Sigue estudiando para desbloquearlos!</p>';
+                return;
+            }
+
+            achievementsContainer.innerHTML = '';
+            logros.forEach(logro => {
+                const achievementCard = document.createElement('div');
+                achievementCard.style.cssText = 'text-align: center; padding: 1rem; border: 2px solid var(--primary-color); border-radius: var(--border-radius); background: var(--bg-light);';
+                achievementCard.innerHTML = `
+                    <i class="${logro.icono}" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+                    <h4 style="margin: 0; color: var(--text-dark);">${logro.nombre}</h4>
+                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">${logro.descripcion}</p>
+                    <small style="color: var(--text-muted);">Obtenido: ${new Date(logro.fecha_obtenido).toLocaleDateString()}</small>
+                `;
+                achievementsContainer.appendChild(achievementCard);
+            });
+        }
+
+        // Animación de las barras de progreso
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        }
+
+        // Cargar datos al cargar la página
+        window.addEventListener('load', async function() {
+            await loadDashboardData();
+            setTimeout(animateProgressBars, 100);
+        });
+    </script>
+
+    <style>
+        @media (max-width: 768px) {
+            .dashboard-stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            section > .container > div:last-child {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</body>
+</html>

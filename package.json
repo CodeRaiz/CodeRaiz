@@ -1,0 +1,96 @@
+{
+  "name": "coderaiz-plataforma-educativa",
+  "version": "1.0.0",
+  "description": "Plataforma educativa para aprender programación desde cero - Aplicación de Escritorio",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build",
+    "postinstall": "electron-builder install-app-deps",
+    "test": "jest"
+  },
+  "keywords": [
+    "educacion",
+    "programacion",
+    "cursos",
+    "javascript",
+    "python",
+    "desktop",
+    "electron"
+  ],
+  "author": {
+    "name": "CodeRaíz Team",
+    "email": "info@coderaiz.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.4",
+    "fs-extra": "^11.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.6",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.13.3",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "build": {
+    "appId": "com.coderaiz.plataforma-educativa",
+    "productName": "CodeRaíz - Plataforma Educativa",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "css/**/*",
+      "js/**/*",
+      "cursos/**/*",
+      "*.html",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.education"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png",
+      "category": "Education"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderaiz/plataforma-educativa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coderaiz/plataforma-educativa/issues"
+  },
+  "homepage": "https://coderaiz.com"
+}
